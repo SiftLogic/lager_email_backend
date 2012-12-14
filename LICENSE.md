@@ -1,6 +1,6 @@
 ### The MIT License
 
-Copyright (c) 2011, 2012 SiftLogic LLC http://www.siftlogic.com
+Copyright (c) 2012 SiftLogic LLC http://www.siftlogic.com
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
