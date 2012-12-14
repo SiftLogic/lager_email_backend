@@ -1,0 +1,13 @@
+%% -*- Erlang -*-
+{application, lager_email_backend,
+ [
+  {description, "Email backend for Lager"},
+  {vsn, git},
+  {modules,
+   [lager_email_backend]},
+  {applications,
+   [kernel,
+    stdlib,
+    lager,
+    gen_smtp]},
+  {env, []}]}.
