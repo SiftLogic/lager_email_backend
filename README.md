@@ -12,9 +12,10 @@ email is generated.  Usually because of bugs in other people's code.
 We believe that this list is good also for general usage, but feel
 free to customize to your local situation.
 
-The second is that we use our own log wrapper (slog.erl, included) and
-messages are gathered together based on the output format of that
-module.  It usually works for the default format too, but not as well.
+The second is that we use our own log wrapper (lager_wrapper.erl,
+included) and messages are gathered together based on the output
+format of that module.  It usually works for the default format too,
+but not as well.
 
 To activate the backend put something like
 
