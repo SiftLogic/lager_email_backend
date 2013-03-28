@@ -128,7 +128,9 @@ ignore_error(Error) ->
                   "mochiweb,new_request",
                   "ssl_connection",
                   "pkix_decode_cert",
-                  "pubkey_cert"], Error).
+                  "pubkey_cert",
+                  "smwebcheck_lhttpc_pool",
+                  "no such process or port in call"], Error).
 
 ignore_error([], _Error) ->
     false;
