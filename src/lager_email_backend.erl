@@ -108,10 +108,10 @@ handle_info({'DOWN', _, process, _, normal}, State) ->
 handle_info({'DOWN', _, process, _, shutdown}, State) ->
     {ok, State};
 handle_info({'DOWN', _, process, _, Reason}, State) ->
-    io:format("~p #~p Crash while sending: ~p~n", [?MODULE, ?LINE, Reason]),
+    io:format("~p #~p Crash while sending: ~n~p~n", [?MODULE, ?LINE, Reason]),
     {ok, State};
 handle_info(Info, State) ->
-    io:format("~p #~p Unknown info ~p~n", [?MODULE, ?LINE, Info]),
+    io:format("~p #~p Unknown info ~n~p~n", [?MODULE, ?LINE, Info]),
     {ok, State}.
 
 terminate(_Reason, _State) ->
