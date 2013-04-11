@@ -132,7 +132,8 @@ ignore_error(Error) ->
                   "smwebcheck_lhttpc_pool",
                   "no such process or port in call",
                   "exited with reason: sock_closed in gen_server:terminate",
-                  "terminated with reason: sock_closed"], Error).
+                  "terminated with reason: sock_closed",
+                  "Supervisor amqp_connection_sup had child at module undefined at"], Error).
 
 ignore_error([], _Error) ->
     false;
