@@ -131,7 +131,8 @@ ignore_error(Error) ->
                   "pubkey_cert",
                   "smwebcheck_lhttpc_pool",
                   "no such process or port in call",
-                  "exited with reason: sock_closed in gen_server:terminate"], Error).
+                  "exited with reason: sock_closed in gen_server:terminate",
+                  "terminated with reason: sock_closed"], Error).
 
 ignore_error([], _Error) ->
     false;
