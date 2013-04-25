@@ -133,7 +133,9 @@ ignore_error(Error) ->
                   "no such process or port in call",
                   "exited with reason: sock_closed in gen_server:terminate",
                   "terminated with reason: sock_closed",
-                  "Supervisor amqp_connection_sup had child at module undefined at"], Error).
+                  "Supervisor amqp_connection_sup had child at module undefined at",
+                  "Supervisor smemail_job_sup had child.*exit with reason noproc in context shutdown_error"],
+                 Error).
 
 ignore_error([], _Error) ->
     false;
