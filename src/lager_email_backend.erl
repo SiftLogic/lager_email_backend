@@ -220,7 +220,7 @@ compose_emails(Messages) ->
                       LevelStr = atom_to_list(lager_util:num_to_level(Level)),
                       Body =
                           [Date, "T", Time, "\r\n",
-                           Location, "\r\n",
+                           atom_to_list(node()), " ", Location, "\r\n",
                            LevelStr, "\r\n",
                            MsgText],
                       case lists:keyfind(
