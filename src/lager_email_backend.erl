@@ -330,26 +330,34 @@ mk_shortstr(Str) ->
             end
     end.
 
+
 send_blocking(From, ToList, Msg, Opts) ->
     case gen_smtp_client:send_blocking({From, ToList, Msg}, Opts) of
         {error, Type, Error} ->
             Cmd =
                 lists:flatten(io_lib:format(
                                 "gen_smtp_client:send_blocking({"
-                                "~p, ~p, ~p}, ~p)",
-                                [From, ToList, Msg, Opts])),
+                                "~p, ~p, ~s}, ~p)",
+                                [From, ToList, to_str(Msg), Opts])),
             exit({error, Type, Error, Cmd, erlang:get_stacktrace()});
         {error, Reason} ->
             Cmd =
                 lists:flatten(io_lib:format(
                                 "gen_smtp_client:send_blocking({"
                                 "~p, ~p, ~p}, ~p)",
-                                [From, ToList, Msg, Opts])),
+                                [From, ToList, to_str(Msg), Opts])),
             exit({error, Reason, Cmd, erlang:get_stacktrace()});
         SMTPReceipt when is_binary(SMTPReceipt) ->
             io:format("Successfully sent email to ~s with receipt ~s",
                       [string:join(ToList, ", "), SMTPReceipt]),
             ok
+    end.
+
+to_str(Msg) ->
+    try iolist_to_binary(Msg) of
+        Bin -> Bin
+    catch error:badarg ->
+            lists:flatten(io_lib:format("~p", [Msg]))
     end.
 
 get_conf(Key, L, Default) ->
