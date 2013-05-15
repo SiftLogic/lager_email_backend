@@ -136,7 +136,8 @@ ignore_error(Error) ->
                   "terminated with reason: sock_closed",
                   "Supervisor amqp_connection_sup had child at module undefined at",
                   "Supervisor smemail_job_sup had child.*exit with reason noproc in context shutdown_error",
-                  "timeout.*gen_server.*egeoip_"],
+                  "timeout.*gen_server.*egeoip_",
+                  "gen_tcp.*lhttpc_client,send_request,1"],
                  Error).
 
 ignore_error([], _Error) ->
