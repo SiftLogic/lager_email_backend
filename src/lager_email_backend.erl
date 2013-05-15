@@ -122,6 +122,7 @@ code_change(_OldVsn, State, _Extra) ->
 
 ignore_error(Error) ->
     ignore_error(["OTP-PUB-KEY",
+                  "ssl_alert:description_txt",
                   "type not compatible with table constraint",
                   "amqp_connection_type_sup",
                   "socket_error,einval",
@@ -134,7 +135,8 @@ ignore_error(Error) ->
                   "exited with reason: sock_closed in gen_server:terminate",
                   "terminated with reason: sock_closed",
                   "Supervisor amqp_connection_sup had child at module undefined at",
-                  "Supervisor smemail_job_sup had child.*exit with reason noproc in context shutdown_error"],
+                  "Supervisor smemail_job_sup had child.*exit with reason noproc in context shutdown_error",
+                  "timeout.*gen_server.*egeoip_"],
                  Error).
 
 ignore_error([], _Error) ->
