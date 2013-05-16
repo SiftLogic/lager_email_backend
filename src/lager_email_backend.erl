@@ -137,7 +137,8 @@ ignore_error(Error) ->
                   "Supervisor amqp_connection_sup had child at module undefined at",
                   "Supervisor smemail_job_sup had child.*exit with reason noproc in context shutdown_error",
                   "timeout.*gen_server.*egeoip_",
-                  "gen_tcp.*lhttpc_client,send_request,1"],
+                  "gen_tcp.*lhttpc_client,send_request,1",
+                  "{{badmatch,{error,enotconn}},\\[{cowboy_req,new,14,"],
                  Error).
 
 ignore_error([], _Error) ->
