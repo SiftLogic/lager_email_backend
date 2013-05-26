@@ -134,10 +134,13 @@ ignore_error(Error) ->
                   "no such process or port in call",
                   "exited with reason: sock_closed in gen_server:terminate",
                   "terminated with reason: sock_closed",
+                  "terminated with reason: socket_closed",
+                  "terminated with reason.*gen_server,call.*close,200",
                   "Supervisor amqp_connection_sup had child at module undefined at",
                   "Supervisor smemail_job_sup had child.*exit with reason noproc in context shutdown_error",
                   "timeout.*gen_server.*egeoip_",
                   "gen_tcp.*lhttpc_client,send_request,1",
+                  "",
                   "{{badmatch,{error,enotconn}},\\[{cowboy_req,new,14,"],
                  Error).
 
