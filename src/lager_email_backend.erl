@@ -140,6 +140,7 @@ ignore_error(Error) ->
                   "Supervisor smemail_job_sup had child.*exit with reason noproc in context shutdown_error",
                   "timeout.*gen_server.*egeoip_",
                   "gen_tcp.*lhttpc_client,send_request,1",
+                  "tls_connection:handle_alert",
                   "{{badmatch,{error,enotconn}},\\[{cowboy_req,new,14,"],
                  Error).
 
