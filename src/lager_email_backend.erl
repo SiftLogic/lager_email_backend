@@ -141,6 +141,7 @@ ignore_error(Error) ->
                   "timeout.*gen_server.*egeoip_",
                   "gen_tcp.*lhttpc_client,send_request,1",
                   "tls_connection:handle_alert",
+                  "Fatal error: certificate unknown",
                   "{{badmatch,{error,enotconn}},\\[{cowboy_req,new,14,"],
                  Error).
 
