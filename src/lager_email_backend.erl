@@ -128,6 +128,7 @@ ignore_error(Error) ->
                   "socket_error,einval",
                   "mochiweb,new_request",
                   "ssl_connection",
+                  "Warning: unrecognised name",
                   "pkix_decode_cert",
                   "pubkey_cert",
                   "smwebcheck_lhttpc_pool",
