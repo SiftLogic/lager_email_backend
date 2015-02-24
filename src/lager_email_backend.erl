@@ -129,6 +129,7 @@ ignore_error(Error) ->
                   "mochiweb,new_request",
                   "ssl_connection",
                   "Warning: unrecognised name",
+                  "Fatal Error: protocol version",
                   "pkix_decode_cert",
                   "pubkey_cert",
                   "smwebcheck_lhttpc_pool",
