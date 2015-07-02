@@ -147,7 +147,8 @@ ignore_error(Error) ->
                   "gen_tcp.*lhttpc_client,send_request,1",
                   "tls_connection:handle_alert",
                   "Fatal error: certificate unknown",
-                  "{{badmatch,{error,enotconn}},\\[{cowboy_req,new,14,"],
+                  "{{badmatch,{error,enotconn}},\\[{cowboy_req,new,14,",
+                  "ets:select_delete"],
                  Error).
 
 ignore_error([], _Error) ->
