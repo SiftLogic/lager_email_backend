@@ -148,7 +148,7 @@ ignore_error(Error) ->
                   "tls_connection:handle_alert",
                   "Fatal error: certificate unknown",
                   "{{badmatch,{error,enotconn}},\\[{cowboy_req,new,14,",
-                  "Message decode failed with error:missing_boundary",
+                  "Message decode failed with",
                   "ets:select_delete"],
                  Error).
 
