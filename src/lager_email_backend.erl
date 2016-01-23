@@ -149,7 +149,8 @@ ignore_error(Error) ->
                   "Fatal error: certificate unknown",
                   "{{badmatch,{error,enotconn}},\\[{cowboy_req,new,14,",
                   "Message decode failed with",
-                  "ets:select_delete"],
+                  "ets:select_delete",
+                  "cowboy_protocol,parse_.*0 bytes"],
                  Error).
 
 ignore_error([], _Error) ->
