@@ -171,7 +171,7 @@ enqueue(#state{email_conf = #email_conf{send_delay = SendDelay},
     Msg = msg(Level, Date, Time, Location, LogMessage),
     State = State0#state{messages = [Msg | Msgs0]},
     case LastSendTime =:= null orelse
-        (time_add(LastSendTime, SendDelay) < erlang:now()) orelse
+        (time_add(LastSendTime, SendDelay) < erlang:timestamp()) orelse
         Level =< ImmediateSendLevel of
         true ->
             case Timer of
@@ -214,7 +214,7 @@ send_all(#state{messages = Messages,
                            log,
                            [info, self(), ?SPECIAL_TRIGGER_MESSAGE]),
             State1#state{messages = [],
-                         last_send_time = erlang:now(),
+                         last_send_time = erlang:timestamp(),
                          send_timer = TRef};
         false ->
             State0

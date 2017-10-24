@@ -77,7 +77,7 @@ debug(Format, Data) ->
 
 format(Format, Data) ->
     catch throw(stacktrace),
-    Stacktrace = erlang:get_stacktrace(),
+    Stacktrace = try throw(foo) catch throw:_ -> erlang:get_stacktrace() end,
     Frame = case Stacktrace of
                 [_, _, ThisOne | _] -> ThisOne;
                 [_ | _] -> unknown
