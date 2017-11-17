@@ -2,7 +2,7 @@
 {application, lager_email_backend,
  [
   {description, "Email backend for Lager"},
-  {vsn, "0.1.0"},
+  {vsn, "0.2.0"},
   {modules,
    [lager_email_backend,
     lager_wrapper]},
