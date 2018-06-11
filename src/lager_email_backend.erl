@@ -150,7 +150,8 @@ ignore_error(Error) ->
                   "{{badmatch,{error,enotconn}},\\[{cowboy_req,new,14,",
                   "Message decode failed with",
                   "ets:select_delete",
-                  "cowboy_protocol,parse_.*0 bytes"],
+                  "cowboy_protocol,parse_.*0 bytes",
+                  "exit with reason killed in context shutdown_error"],
                  Error).
 
 ignore_error([], _Error) ->
