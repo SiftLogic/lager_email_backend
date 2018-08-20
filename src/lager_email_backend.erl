@@ -128,6 +128,7 @@ ignore_error(Error) ->
                   "socket_error,einval",
                   "mochiweb,new_request",
                   "ssl_connection",
+                  "ssl_alert.erl",
                   "Warning: unrecognised name",
                   "Fatal error: unrecognised name",
                   "Fatal Error: protocol version",
